@@ -7,7 +7,6 @@
   "license": "ISC",
   "homepage": "https://github.com/Maryann380/CodeSample#readme",
   "devDependencies": {
-    "async-waterfall": "^0.1.5",
     "autoprefixer": "^6.0.3",
     "bootstrap": "^3.3.7",
     "css-plugin-autoprefix": "^1.5.1",
@@ -49,13 +48,11 @@
     "js",
     "css",
     "files",
-    "syncx",
     "responsive",
     "fluid",
     "front-end",
     "html",
-    "bootstrap",
-    "nunjucks"
+    "bootstrap"
   ],
   "dependencies": {
     "@font/nunito": "^1.0.3",

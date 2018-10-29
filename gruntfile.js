@@ -94,68 +94,8 @@ module.exports = function(grunt) {
         // jshint: {
         //     options: {
         //         jshintrc: '.jshintrc',
-        //         verbose: true,
-        //     },
-        //     all:[
-        //         'gruntfile.js',
-        //         jsBaseDir + '/custom/*.js',
-        //         '!' + jsBaseDir + '/*.js',
-        //         '!' + jsBaseDir + '/third-party/*.js'
-        //     ]
-        // },
-
-        // copy JS files task
-        sync: {
-            options: {
-                paths: ''
-            },
-            dev: {
-                files: [{
-                    expand: true,
-                    cwd: 'src',
-                    src: ['js/**/*.js'],
-                    dest: ''
-                }],
-                verbose: true
-            },
-            awesomeFonts: {
-                files: [{
-                    expand: true,
-                    cwd: 'node_modules/font-awesome',
-                    src: ['fonts/**/*.*'],
-                    dest: ''
-                }],
-                verbose: true
-            },
-            fonts: {
-                files: [{
-                    expand: true,
-                    cwd: 'src',
-                    src: ['fonts/**/*.*'],
-                    dest: ''
-                }],
-                verbose: true
-            },
-            images: {
-                files: [{
-                    expand: true,
-                    cwd: 'src',
-                    src: ['images/**'],
-                    dest: ''
-                }],
-                verbose: true
-            },
-
-            moveStaticFiles: {
-                files: [{
-                    expand: true,
-                    cwd: 'templates',
-                    src: ['**/*.*'],
-                    dest: ''
-                }],
-                verbose: true
-            }
-        },
+        //         ver
+        
 
         
 
@@ -197,11 +137,10 @@ module.exports = function(grunt) {
             html: {
                 files: [
                     'src/**/*.html',
-                    'src/**/*.njk'
+                    'src/**/*.html'
                 ],
                 tasks: [
                     'clean:html',
-                    'nunjucks',
                     'prettify',
                     'sync'
                 ],
@@ -219,25 +158,6 @@ module.exports = function(grunt) {
                 }
             }
         },
-
-        // Nunjucks task
-        // nunjucks: {
-        //     options: {
-        //         paths: 'src/html'
-        //     },
-        //     dev: {
-        //         files: [{
-        //             expand: true,
-        //             cwd: 'src/html',
-        //             src: [
-        //                 '**/*.html'
-        //             ],
-        //             dest: '',
-        //             ext: '.html'
-        //         }],
-        //     }
-        // },
-
         // Clean task
         clean: {
             html: {
@@ -295,9 +215,6 @@ module.exports = function(grunt) {
                     error: true
                 }
             },
-            // test : {
-            //     src: ['templates/manage-customer.html']
-            // }
         }
     });
 
@@ -334,7 +251,7 @@ module.exports = function(grunt) {
         'watch'
     ]);
 
-    // grunt.registerTask('serve-up', ['sync:moveStaticFiles', 'connect:devServer']);
+    grunt.registerTask('serve-up', ['sync:moveStaticFiles', 'connect:devServer']);
     // grunt.registerTask('move-static', 'connect:moveStaticFiles');
     grunt.registerTask('test-js', 'jasmine');
     // grunt.registerTask('check-js', ['jshint']);
