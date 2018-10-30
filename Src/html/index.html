@@ -9,30 +9,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
         crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.37/css/bootstrap-datetimepicker.min.css"
     />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/jquery.mcustomscrollbar/3.0.6/jquery.mCustomScrollbar.min.css" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-typeahead/2.10.6/jquery.typeahead.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Zebra_datepicker/1.9.11/css/bootstrap/zebra_datepicker.min.css">
+    <link rel="stylesheet" href="/sass/home.scss" type="text/css">
     </head>
     <body>
-            <!DOCTYPE html>
-            <html>
-            <head>
-                <meta charset="utf-8" />
-                <meta http-equiv="X-UA-Compatible" content="IE=edge">
-                <title>Page Title</title>
-                <meta name="viewport" content="width=device-width, initial-scale=1">
-                <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-                <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js" integrity="sha384-SlE991lGASHoBfWbelyBPLsUlwY1GwNDJo3jSJO04KZ33K2bwfV9YBauFfnzvynJ" crossorigin="anonymous"></script>
-                <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
-                <link rel="stylesheet" type="text/css" href="../css/file.css" />
-                
-                
-                
-            </head>
-            <body>
             
                 <div class="container">
                     <button class="tablink" onclick="openCity('Home', this, 'pink')" id="defaultOpen">Home</button>
@@ -51,7 +37,18 @@
                                 <p>Our Motive is Customers Satisfaciton </p>
                             </div>
                             <div class="col-sm-4">
-                                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQDP4N8ldrTGGX7WlqOTr_uABH2r5-FrmJzxJ7q4ntUQ8mTmeklkg" alt="" class="top-img">
+                                <div id="myCarousel" class="carousel slide">
+                                    <div class="carousel-inner">
+                                        <div class="active item"><a href="#"><img src="../imgs/img1.jpeg" alt="everything beautiful"></a></div>
+                                        <div class="item"><a href="#"><img src="../imgs/img2.jpeg" alt="everything beautiful"></a></div>
+                                        <div class="item"><a href="#"><img src="../imgs/nice.jpg" alt="everything beautiful"></a></div>
+                                        <div class="item"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQDP4N8ldrTGGX7WlqOTr_uABH2r5-FrmJzxJ7q4ntUQ8mTmeklkg" alt="" class="top-img"></div>
+                                        <div class="item"><a href="#"><img src="../imgs/teardrop.jpeg" alt="everything beautiful"></a></div>
+                                        <div class="item"><a href="#"><img src="../imgs/bottle.jpeg" alt="everything beautiful"></a></div>
+                                    </div>
+                                    <a class="carousel-control left" href="#myCarousel" data-slide="prev">&lsaquo;</a>
+                                    <a class="carousel-control right" href="#myCarousel" data-slide="next">&rsaquo;</a>
+                                </div>
                             </div>
                         </div>
                         <hr class="bright-light">
@@ -217,12 +214,12 @@
                                     <fieldset>
                                         <legend></legend>
                                         <label for="email">Username/Email</label>
-                                        <input type="text" name="username" id="email" required>
+                                        <input type="text" name="username" id="email1" required>
                                     </fieldset>
                                     <fieldset>
                                         <legend></legend>
                                         <label for="password">Password</label>
-                                        <input type="password" name="password" id="password" required>
+                                        <input type="password" name="password" id="password1" required>
                                     </fieldset>
                                     <div class="form-group">
                                         <button class="btn btn-primary">Login</button>
@@ -240,17 +237,17 @@
                                     <fieldset>
                                         <legend></legend>
                                         <label for="email">Email</label>
-                                        <input type="email" name="email" id="email" required>
+                                        <input type="email" name="email" id="email2" required>
                                     </fieldset>
                                     <fieldset>
                                         <legend></legend>
                                         <label for="password">Password</label>
-                                        <input type="password" name="password" id="password" required>
+                                        <input type="password" name="password" id="password2" required>
                                     </fieldset>
                                     <fieldset>
                                         <legend></legend>
                                         <label for="confirm_password">Confirm Password</label>
-                                        <input type="confirm_password" name="confirm_password" id="confirm_password" required>
+                                        <input type="confirm_password" name="confirm_password" id="confirmPassword" required>
                                     </fieldset>
                                 </form>
                                 <div class="form-group">
@@ -270,22 +267,10 @@
                 <script src="https://cdn.jsdelivr.net/jquery.mcustomscrollbar/3.0.6/jquery.mCustomScrollbar.concat.min.js"></script>
                 <script src="https://cdnjs.cloudflare.com/ajax/libs/typeahead.js/0.11.1/typeahead.bundle.min.js"></script>
                 <script src="https://cdnjs.cloudflare.com/ajax/libs/Zebra_datepicker/1.9.11/zebra_datepicker.min.js"></script>
-                    <script src="../js/index.js"></script>
+                <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js" integrity="sha384-SlE991lGASHoBfWbelyBPLsUlwY1GwNDJo3jSJO04KZ33K2bwfV9YBauFfnzvynJ" crossorigin="anonymous"></script>
+                <script src="../js/index.js"></script>
                     <!--<script src="main.js"></script>--><script>
-                        function openCity(cityName,elmnt,color) {
-                            var i, tabcontent, tablinks;
-                            tabcontent = document.getElementsByClassName("tabcontent");
-                            for (i = 0; i < tabcontent.length; i++) {
-                                tabcontent[i].style.display = "none";
-                            }
-                            tablinks = document.getElementsByClassName("tablink");
-                            for (i = 0; i < tablinks.length; i++) {
-                                tablinks[i].style.backgroundColor = "";
-                            }
-                            document.getElementById(cityName).style.display = "block";
-                            elmnt.style.backgroundColor = color;
-                            
-                        }
+                       
                         // Get the element with id="defaultOpen" and click on it
                         document.getElementById("defaultOpen").click();
                     </script> 
